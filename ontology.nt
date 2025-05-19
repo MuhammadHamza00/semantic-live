@@ -1,6 +1,53 @@
-<https://muhammadhamza00.github.io/semantic-live> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://muhammadhamza00.github.io/semantic-live> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology to model the Final Year Project process including people, documents, evaluations, and organizational structure." .
-<https://muhammadhamza00.github.io/semantic-live> <http://www.w3.org/2000/01/rdf-schema#label> "FypProOnt" .
+<http://fypontpro.org/fyp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://fypontpro.org/fyp> <http://purl.org/dc/terms/created> "2025-05-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://fypontpro.org/fyp> <http://purl.org/dc/terms/creator> "Your Name"@en .
+<http://fypontpro.org/fyp> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://fypontpro.org/fyp> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology describing the academic final year project process, its participants, documents, and evaluation methods."@en .
+<http://fypontpro.org/fyp> <http://www.w3.org/2000/01/rdf-schema#label> "FYP Process Ontology"@en .
+<http://fypontpro.org/fyp> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/> .
+<http://fypontpro.org/fyp> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#comment
+<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#label
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#seeAlso
+<http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
 # 
 # 
 # #################################################################
@@ -10,65 +57,54 @@
 # #################################################################
 # 
 # 
-# https://muhammadhamza00.github.io/semantic-live#assignedTo
-<https://muhammadhamza00.github.io/semantic-live#assignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#assignedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a person or role to a task or project." .
-<https://muhammadhamza00.github.io/semantic-live#assignedTo> <http://www.w3.org/2000/01/rdf-schema#label> "assigned To" .
+# http://fypontpro.org/fyp#belongsToDepartment
+<http://fypontpro.org/fyp#belongsToDepartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fypontpro.org/fyp#belongsToDepartment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#belongsToDepartment> <http://www.w3.org/2000/01/rdf-schema#range> <http://fypontpro.org/fyp#Department> .
+<http://fypontpro.org/fyp#belongsToDepartment> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project or person with a department"@en .
+<http://fypontpro.org/fyp#belongsToDepartment> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to department"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#authoredBy
-<https://muhammadhamza00.github.io/semantic-live#authoredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#authoredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the author of a document." .
-<https://muhammadhamza00.github.io/semantic-live#authoredBy> <http://www.w3.org/2000/01/rdf-schema#label> "authored By" .
+# http://fypontpro.org/fyp#hasDocumentation
+<http://fypontpro.org/fyp#hasDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fypontpro.org/fyp#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#range> <http://fypontpro.org/fyp#Documentation> .
+<http://fypontpro.org/fyp#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project with its documents"@en .
+<http://fypontpro.org/fyp#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#label> "has documentation"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#belongsToUniversity
-<https://muhammadhamza00.github.io/semantic-live#belongsToUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#belongsToUniversity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a department to its university." .
-<https://muhammadhamza00.github.io/semantic-live#belongsToUniversity> <http://www.w3.org/2000/01/rdf-schema#label> "belongs To University" .
+# http://fypontpro.org/fyp#hasEvaluation
+<http://fypontpro.org/fyp#hasEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fypontpro.org/fyp#hasEvaluation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#hasEvaluation> <http://www.w3.org/2000/01/rdf-schema#range> <http://fypontpro.org/fyp#Evaluation> .
+<http://fypontpro.org/fyp#hasEvaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project with its evaluation"@en .
+<http://fypontpro.org/fyp#hasEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "has evaluation"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#hasDepartment
-<https://muhammadhamza00.github.io/semantic-live#hasDepartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#hasDepartment> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the departments under a university." .
-<https://muhammadhamza00.github.io/semantic-live#hasDepartment> <http://www.w3.org/2000/01/rdf-schema#label> "has Department" .
+# http://fypontpro.org/fyp#hasEvaluator
+<http://fypontpro.org/fyp#hasEvaluator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fypontpro.org/fyp#hasEvaluator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Evaluation> .
+<http://fypontpro.org/fyp#hasEvaluator> <http://www.w3.org/2000/01/rdf-schema#range> <http://fypontpro.org/fyp#Evaluator> .
+<http://fypontpro.org/fyp#hasEvaluator> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an evaluation with an evaluator"@en .
+<http://fypontpro.org/fyp#hasEvaluator> <http://www.w3.org/2000/01/rdf-schema#label> "has evaluator"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#hasDocumentation
-<https://muhammadhamza00.github.io/semantic-live#hasDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project to its documentation artifacts." .
-<https://muhammadhamza00.github.io/semantic-live#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#label> "has Documentation" .
+# http://fypontpro.org/fyp#hasStudent
+<http://fypontpro.org/fyp#hasStudent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fypontpro.org/fyp#hasStudent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#hasStudent> <http://www.w3.org/2000/01/rdf-schema#range> <http://fypontpro.org/fyp#Student> .
+<http://fypontpro.org/fyp#hasStudent> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a project with a student"@en .
+<http://fypontpro.org/fyp#hasStudent> <http://www.w3.org/2000/01/rdf-schema#label> "has student"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#hasEvaluator
-<https://muhammadhamza00.github.io/semantic-live#hasEvaluator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#hasEvaluator> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an evaluation to the evaluator." .
-<https://muhammadhamza00.github.io/semantic-live#hasEvaluator> <http://www.w3.org/2000/01/rdf-schema#label> "has Evaluator" .
+# http://fypontpro.org/fyp#hasSupervisor
+<http://fypontpro.org/fyp#hasSupervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fypontpro.org/fyp#hasSupervisor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#hasSupervisor> <http://www.w3.org/2000/01/rdf-schema#range> <http://fypontpro.org/fyp#Supervisor> .
+<http://fypontpro.org/fyp#hasSupervisor> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a project with a supervisor"@en .
+<http://fypontpro.org/fyp#hasSupervisor> <http://www.w3.org/2000/01/rdf-schema#label> "has supervisor"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#hasGroup
-<https://muhammadhamza00.github.io/semantic-live#hasGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#hasGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project to its associated student group." .
-<https://muhammadhamza00.github.io/semantic-live#hasGroup> <http://www.w3.org/2000/01/rdf-schema#label> "has Group" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#hasProject
-<https://muhammadhamza00.github.io/semantic-live#hasProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#hasProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Assigns a project to a group or student." .
-<https://muhammadhamza00.github.io/semantic-live#hasProject> <http://www.w3.org/2000/01/rdf-schema#label> "has Project" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#hasSupervisor
-<https://muhammadhamza00.github.io/semantic-live#hasSupervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#hasSupervisor> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a group with its assigned supervisor." .
-<https://muhammadhamza00.github.io/semantic-live#hasSupervisor> <http://www.w3.org/2000/01/rdf-schema#label> "has Supervisor" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#memberOf
-<https://muhammadhamza00.github.io/semantic-live#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates student membership in a group." .
-<https://muhammadhamza00.github.io/semantic-live#memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "member Of" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#reviewedBy
-<https://muhammadhamza00.github.io/semantic-live#reviewedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#reviewedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the reviewer of a document or work." .
-<https://muhammadhamza00.github.io/semantic-live#reviewedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reviewed By" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#usesTechnology
-<https://muhammadhamza00.github.io/semantic-live#usesTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://muhammadhamza00.github.io/semantic-live#usesTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the technology used in a project." .
-<https://muhammadhamza00.github.io/semantic-live#usesTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "uses Technology" .
+# http://fypontpro.org/fyp#usesTechnology
+<http://fypontpro.org/fyp#usesTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://fypontpro.org/fyp#usesTechnology> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#usesTechnology> <http://www.w3.org/2000/01/rdf-schema#range> <http://fypontpro.org/fyp#TechnologyStack> .
+<http://fypontpro.org/fyp#usesTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project with a technology/tool used"@en .
+<http://fypontpro.org/fyp#usesTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "uses technology"@en .
 # 
 # 
 # 
@@ -79,85 +115,47 @@
 # #################################################################
 # 
 # 
-# https://muhammadhamza00.github.io/semantic-live#category
-<https://muhammadhamza00.github.io/semantic-live#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#category> <http://www.w3.org/2000/01/rdf-schema#comment> "category of a project or document." .
-<https://muhammadhamza00.github.io/semantic-live#category> <http://www.w3.org/2000/01/rdf-schema#label> "category" .
+# http://fypontpro.org/fyp#description
+<http://fypontpro.org/fyp#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://fypontpro.org/fyp#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://fypontpro.org/fyp#description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the project"@en .
+<http://fypontpro.org/fyp#description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#createdDate
-<https://muhammadhamza00.github.io/semantic-live#createdDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#createdDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Timestamp of when a document or item was created." .
-<https://muhammadhamza00.github.io/semantic-live#createdDate> <http://www.w3.org/2000/01/rdf-schema#label> "Created Date" .
+# http://fypontpro.org/fyp#gradeValue
+<http://fypontpro.org/fyp#gradeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://fypontpro.org/fyp#gradeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Grade> .
+<http://fypontpro.org/fyp#gradeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://fypontpro.org/fyp#gradeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Grade awarded to the project"@en .
+<http://fypontpro.org/fyp#gradeValue> <http://www.w3.org/2000/01/rdf-schema#label> "Grade Value"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#duration
-<https://muhammadhamza00.github.io/semantic-live#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Time span or length of a project or presentation." .
-<https://muhammadhamza00.github.io/semantic-live#duration> <http://www.w3.org/2000/01/rdf-schema#label> "Duration" .
+# http://fypontpro.org/fyp#languageName
+<http://fypontpro.org/fyp#languageName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://fypontpro.org/fyp#languageName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Language> .
+<http://fypontpro.org/fyp#languageName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://fypontpro.org/fyp#languageName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the language used"@en .
+<http://fypontpro.org/fyp#languageName> <http://www.w3.org/2000/01/rdf-schema#label> "Language Name"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#email
-<https://muhammadhamza00.github.io/semantic-live#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#email> <http://www.w3.org/2000/01/rdf-schema#comment> "Email address of a person." .
-<https://muhammadhamza00.github.io/semantic-live#email> <http://www.w3.org/2000/01/rdf-schema#label> "Email" .
+# http://fypontpro.org/fyp#scoreValue
+<http://fypontpro.org/fyp#scoreValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://fypontpro.org/fyp#scoreValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Mark> .
+<http://fypontpro.org/fyp#scoreValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://fypontpro.org/fyp#scoreValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Numeric score"@en .
+<http://fypontpro.org/fyp#scoreValue> <http://www.w3.org/2000/01/rdf-schema#label> "Score Value"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#endDate
-<https://muhammadhamza00.github.io/semantic-live#endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Completion date of the project." .
-<https://muhammadhamza00.github.io/semantic-live#endDate> <http://www.w3.org/2000/01/rdf-schema#label> "End Date" .
+# http://fypontpro.org/fyp#submissionDate
+<http://fypontpro.org/fyp#submissionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://fypontpro.org/fyp#submissionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Documentation> .
+<http://fypontpro.org/fyp#submissionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://fypontpro.org/fyp#submissionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the document was submitted"@en .
+<http://fypontpro.org/fyp#submissionDate> <http://www.w3.org/2000/01/rdf-schema#label> "Submission Date"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#evaluationDate
-<https://muhammadhamza00.github.io/semantic-live#evaluationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#evaluationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date on which evaluation was conducted." .
-<https://muhammadhamza00.github.io/semantic-live#evaluationDate> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Date" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#goal
-<https://muhammadhamza00.github.io/semantic-live#goal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#goal> <http://www.w3.org/2000/01/rdf-schema#comment> "Objective or aim of the project." .
-<https://muhammadhamza00.github.io/semantic-live#goal> <http://www.w3.org/2000/01/rdf-schema#label> "Goal" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#grade
-<https://muhammadhamza00.github.io/semantic-live#grade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#grade> <http://www.w3.org/2000/01/rdf-schema#comment> "Letter or qualitative grade for a project." .
-<https://muhammadhamza00.github.io/semantic-live#grade> <http://www.w3.org/2000/01/rdf-schema#label> "Grade" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#projectDescription
-<https://muhammadhamza00.github.io/semantic-live#projectDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#projectDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Brief summary of the project." .
-<https://muhammadhamza00.github.io/semantic-live#projectDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Project Description" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#projectTitle
-<https://muhammadhamza00.github.io/semantic-live#projectTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#projectTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of the project." .
-<https://muhammadhamza00.github.io/semantic-live#projectTitle> <http://www.w3.org/2000/01/rdf-schema#label> "Project Title" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#score
-<https://muhammadhamza00.github.io/semantic-live#score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#score> <http://www.w3.org/2000/01/rdf-schema#comment> "Numerical score in an evaluation." .
-<https://muhammadhamza00.github.io/semantic-live#score> <http://www.w3.org/2000/01/rdf-schema#label> "Score" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#startDate
-<https://muhammadhamza00.github.io/semantic-live#startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Beginning date of the project." .
-<https://muhammadhamza00.github.io/semantic-live#startDate> <http://www.w3.org/2000/01/rdf-schema#label> "Start Date" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#studentID
-<https://muhammadhamza00.github.io/semantic-live#studentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#studentID> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier for a student." .
-<https://muhammadhamza00.github.io/semantic-live#studentID> <http://www.w3.org/2000/01/rdf-schema#label> "Student ID" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#supervisorID
-<https://muhammadhamza00.github.io/semantic-live#supervisorID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#supervisorID> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier for a supervisor." .
-<https://muhammadhamza00.github.io/semantic-live#supervisorID> <http://www.w3.org/2000/01/rdf-schema#label> "Supervisor ID" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#technologyName
-<https://muhammadhamza00.github.io/semantic-live#technologyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#technologyName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the technology used." .
-<https://muhammadhamza00.github.io/semantic-live#technologyName> <http://www.w3.org/2000/01/rdf-schema#label> "Technology Name" .
-# 
-# https://muhammadhamza00.github.io/semantic-live#version
-<https://muhammadhamza00.github.io/semantic-live#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://muhammadhamza00.github.io/semantic-live#version> <http://www.w3.org/2000/01/rdf-schema#comment> "Version number technology." .
-<https://muhammadhamza00.github.io/semantic-live#version> <http://www.w3.org/2000/01/rdf-schema#label> "Version" .
+# http://fypontpro.org/fyp#title
+<http://fypontpro.org/fyp#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://fypontpro.org/fyp#title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://fypontpro.org/fyp#title> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of the project"@en .
+<http://fypontpro.org/fyp#title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en .
 # 
 # 
 # 
@@ -168,94 +166,188 @@
 # #################################################################
 # 
 # 
-# dcterms:Document
-<dcterms:Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<dcterms:Document> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic document entity from Dublin Core." .
-<dcterms:Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document" .
+# http://fypontpro.org/fyp#Comment
+<http://fypontpro.org/fyp#Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Evaluation> .
+<http://fypontpro.org/fyp#Comment> <http://www.w3.org/2000/01/rdf-schema#comment> "Feedback provided by evaluator"@en .
+<http://fypontpro.org/fyp#Comment> <http://www.w3.org/2000/01/rdf-schema#label> "Review Comment"@en .
 # 
-# foaf:Person
-<foaf:Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<foaf:Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A general human individual, reused from FOAF." .
-<foaf:Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# http://fypontpro.org/fyp#Committee
+<http://fypontpro.org/fyp#Committee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Committee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Organization> .
+<http://fypontpro.org/fyp#Committee> <http://www.w3.org/2000/01/rdf-schema#comment> "Academic committee involved in FYP evaluation"@en .
+<http://fypontpro.org/fyp#Committee> <http://www.w3.org/2000/01/rdf-schema#label> "Committee"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Committee
-<https://muhammadhamza00.github.io/semantic-live#Committee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Committee> <http://www.w3.org/2000/01/rdf-schema#comment> "Panel of evaluators or faculty overseeing project quality." .
-<https://muhammadhamza00.github.io/semantic-live#Committee> <http://www.w3.org/2000/01/rdf-schema#label> "Committee" .
+# http://fypontpro.org/fyp#CreativeOutput
+<http://fypontpro.org/fyp#CreativeOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#CreativeOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://fypontpro.org/fyp#CreativeOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Creative or artistic output of a project"@en .
+<http://fypontpro.org/fyp#CreativeOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Creative Output"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Department
-<https://muhammadhamza00.github.io/semantic-live#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Department> <http://www.w3.org/2000/01/rdf-schema#comment> "Academic division within the university." .
-<https://muhammadhamza00.github.io/semantic-live#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department" .
+# http://fypontpro.org/fyp#CreativeProject
+<http://fypontpro.org/fyp#CreativeProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#CreativeProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#CreativeProject> <http://www.w3.org/2002/07/owl#disjointWith> <http://fypontpro.org/fyp#TechnicalProject> .
+<http://fypontpro.org/fyp#CreativeProject> <http://www.w3.org/2000/01/rdf-schema#comment> "A project with artistic or creative output"@en .
+<http://fypontpro.org/fyp#CreativeProject> <http://www.w3.org/2000/01/rdf-schema#label> "Creative Project"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Evaluation
-<https://muhammadhamza00.github.io/semantic-live#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Evaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "Assessment process or result for a project." .
-<https://muhammadhamza00.github.io/semantic-live#Evaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation" .
+# http://fypontpro.org/fyp#Department
+<http://fypontpro.org/fyp#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Department> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Organization> .
+<http://fypontpro.org/fyp#Department> <http://www.w3.org/2002/07/owl#disjointWith> <http://fypontpro.org/fyp#University> .
+<http://fypontpro.org/fyp#Department> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific department within a university"@en .
+<http://fypontpro.org/fyp#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Evaluator
-<https://muhammadhamza00.github.io/semantic-live#Evaluator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Evaluator> <http://www.w3.org/2000/01/rdf-schema#comment> "A person assigned to evaluate student projects." .
-<https://muhammadhamza00.github.io/semantic-live#Evaluator> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluator" .
+# http://fypontpro.org/fyp#Documentation
+<http://fypontpro.org/fyp#Documentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Documentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://fypontpro.org/fyp#Documentation> <http://www.w3.org/2000/01/rdf-schema#comment> "A document related to the FYP project"@en .
+<http://fypontpro.org/fyp#Documentation> <http://www.w3.org/2000/01/rdf-schema#label> "Project Documentation"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#FinalReport
-<https://muhammadhamza00.github.io/semantic-live#FinalReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#FinalReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive documentation of the completed project." .
-<https://muhammadhamza00.github.io/semantic-live#FinalReport> <http://www.w3.org/2000/01/rdf-schema#label> "Final Report" .
+# http://fypontpro.org/fyp#Evaluation
+<http://fypontpro.org/fyp#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Evaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://fypontpro.org/fyp#Evaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluation process and outcome of a project"@en .
+<http://fypontpro.org/fyp#Evaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Group
-<https://muhammadhamza00.github.io/semantic-live#Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Group> <http://www.w3.org/2000/01/rdf-schema#comment> "A team of students working on a single project." .
-<https://muhammadhamza00.github.io/semantic-live#Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group" .
+# http://fypontpro.org/fyp#Evaluator
+<http://fypontpro.org/fyp#Evaluator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Evaluator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Person> .
+<http://fypontpro.org/fyp#Evaluator> <http://www.w3.org/2002/07/owl#disjointWith> <http://fypontpro.org/fyp#Supervisor> .
+<http://fypontpro.org/fyp#Evaluator> <http://www.w3.org/2000/01/rdf-schema#comment> "Person evaluating the project"@en .
+<http://fypontpro.org/fyp#Evaluator> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluator"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Presentation
-<https://muhammadhamza00.github.io/semantic-live#Presentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Presentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Slide deck or other material used to present the project." .
-<https://muhammadhamza00.github.io/semantic-live#Presentation> <http://www.w3.org/2000/01/rdf-schema#label> "Presentation" .
+# http://fypontpro.org/fyp#Film
+<http://fypontpro.org/fyp#Film> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Film> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#CreativeOutput> .
+<http://fypontpro.org/fyp#Film> <http://www.w3.org/2000/01/rdf-schema#comment> "Film created as part of the project"@en .
+<http://fypontpro.org/fyp#Film> <http://www.w3.org/2000/01/rdf-schema#label> "Film"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Project
-<https://muhammadhamza00.github.io/semantic-live#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "The final year project being undertaken." .
-<https://muhammadhamza00.github.io/semantic-live#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
+# http://fypontpro.org/fyp#Framework
+<http://fypontpro.org/fyp#Framework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Framework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#TechnologyStack> .
+<http://fypontpro.org/fyp#Framework> <http://www.w3.org/2000/01/rdf-schema#comment> "Programming or creative framework"@en .
+<http://fypontpro.org/fyp#Framework> <http://www.w3.org/2000/01/rdf-schema#label> "Framework"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#ProjectType
-<https://muhammadhamza00.github.io/semantic-live#ProjectType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#ProjectType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type/category of the project (e.g., research, development)." .
-<https://muhammadhamza00.github.io/semantic-live#ProjectType> <http://www.w3.org/2000/01/rdf-schema#label> "Project Type" .
+# http://fypontpro.org/fyp#Grade
+<http://fypontpro.org/fyp#Grade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Grade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Evaluation> .
+<http://fypontpro.org/fyp#Grade> <http://www.w3.org/2000/01/rdf-schema#comment> "Final grade assigned to project"@en .
+<http://fypontpro.org/fyp#Grade> <http://www.w3.org/2000/01/rdf-schema#label> "Grade"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Proposal
-<https://muhammadhamza00.github.io/semantic-live#Proposal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Proposal> <http://www.w3.org/2000/01/rdf-schema#comment> "Initial documentation outlining the project idea and plan." .
-<https://muhammadhamza00.github.io/semantic-live#Proposal> <http://www.w3.org/2000/01/rdf-schema#label> "Proposal" .
+# http://fypontpro.org/fyp#Language
+<http://fypontpro.org/fyp#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Language> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#TechnologyStack> .
+<http://fypontpro.org/fyp#Language> <http://www.w3.org/2002/07/owl#disjointWith> <http://fypontpro.org/fyp#Tool> .
+<http://fypontpro.org/fyp#Language> <http://www.w3.org/2000/01/rdf-schema#comment> "Programming or scripting language"@en .
+<http://fypontpro.org/fyp#Language> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Student
-<https://muhammadhamza00.github.io/semantic-live#Student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Student> <http://www.w3.org/2000/01/rdf-schema#comment> "A person undertaking a final year project." .
-<https://muhammadhamza00.github.io/semantic-live#Student> <http://www.w3.org/2000/01/rdf-schema#label> "Student" .
+# http://fypontpro.org/fyp#Mark
+<http://fypontpro.org/fyp#Mark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Mark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Evaluation> .
+<http://fypontpro.org/fyp#Mark> <http://www.w3.org/2000/01/rdf-schema#comment> "Numeric score for a project"@en .
+<http://fypontpro.org/fyp#Mark> <http://www.w3.org/2000/01/rdf-schema#label> "Mark"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Supervisor
-<https://muhammadhamza00.github.io/semantic-live#Supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Supervisor> <http://www.w3.org/2000/01/rdf-schema#comment> "Faculty member responsible for guiding the student group." .
-<https://muhammadhamza00.github.io/semantic-live#Supervisor> <http://www.w3.org/2000/01/rdf-schema#label> "Supervisor" .
+# http://fypontpro.org/fyp#Music
+<http://fypontpro.org/fyp#Music> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Music> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#CreativeOutput> .
+<http://fypontpro.org/fyp#Music> <http://www.w3.org/2000/01/rdf-schema#comment> "Musical or sound-based composition"@en .
+<http://fypontpro.org/fyp#Music> <http://www.w3.org/2000/01/rdf-schema#label> "Composition or Music"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#Technology
-<https://muhammadhamza00.github.io/semantic-live#Technology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#Technology> <http://www.w3.org/2000/01/rdf-schema#comment> "Tools or programming languages used in the project." .
-<https://muhammadhamza00.github.io/semantic-live#Technology> <http://www.w3.org/2000/01/rdf-schema#label> "Technology" .
+# http://fypontpro.org/fyp#Organization
+<http://fypontpro.org/fyp#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://fypontpro.org/fyp#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "An academic or institutional body"@en .
+<http://fypontpro.org/fyp#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
 # 
-# https://muhammadhamza00.github.io/semantic-live#University
-<https://muhammadhamza00.github.io/semantic-live#University> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://muhammadhamza00.github.io/semantic-live#University> <http://www.w3.org/2000/01/rdf-schema#comment> "Educational institution offering the program." .
-<https://muhammadhamza00.github.io/semantic-live#University> <http://www.w3.org/2000/01/rdf-schema#label> "University" .
+# http://fypontpro.org/fyp#Person
+<http://fypontpro.org/fyp#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Person> .
+<http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://fypontpro.org/fyp#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A person involved in the FYP process, based on schema:Person"@en .
+<http://fypontpro.org/fyp#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
 # 
-# schema:CollegeOrUniversity
-<schema:CollegeOrUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<schema:CollegeOrUniversity> <http://www.w3.org/2000/01/rdf-schema#comment> "Academic institution from Schema.org." .
-<schema:CollegeOrUniversity> <http://www.w3.org/2000/01/rdf-schema#label> "College or University" .
+# http://fypontpro.org/fyp#Presentation
+<http://fypontpro.org/fyp#Presentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Presentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Documentation> .
+<http://fypontpro.org/fyp#Presentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Project presentation slides or media"@en .
+<http://fypontpro.org/fyp#Presentation> <http://www.w3.org/2000/01/rdf-schema#label> "Presentation"@en .
 # 
-# schema:CreativeWork
-<schema:CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<schema:CreativeWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Creative content such as proposals and reports from Schema.org." .
-<schema:CreativeWork> <http://www.w3.org/2000/01/rdf-schema#label> "Creative Work" .
+# http://fypontpro.org/fyp#Project
+<http://fypontpro.org/fyp#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://fypontpro.org/fyp#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "A Final Year Project entity, core to the ontology"@en .
+<http://fypontpro.org/fyp#Project> <http://www.w3.org/2000/01/rdf-schema#label> "FYP Project"@en .
+# 
+# http://fypontpro.org/fyp#Proposal
+<http://fypontpro.org/fyp#Proposal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Proposal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Documentation> .
+<http://fypontpro.org/fyp#Proposal> <http://www.w3.org/2002/07/owl#disjointWith> <http://fypontpro.org/fyp#Report> .
+<http://fypontpro.org/fyp#Proposal> <http://www.w3.org/2000/01/rdf-schema#comment> "Initial project proposal document"@en .
+<http://fypontpro.org/fyp#Proposal> <http://www.w3.org/2000/01/rdf-schema#label> "Proposal Document"@en .
+# 
+# http://fypontpro.org/fyp#Report
+<http://fypontpro.org/fyp#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Report> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Documentation> .
+<http://fypontpro.org/fyp#Report> <http://www.w3.org/2000/01/rdf-schema#comment> "Mid or final project report"@en .
+<http://fypontpro.org/fyp#Report> <http://www.w3.org/2000/01/rdf-schema#label> "Project Report"@en .
+# 
+# http://fypontpro.org/fyp#ResearchProject
+<http://fypontpro.org/fyp#ResearchProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#ResearchProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#ResearchProject> <http://www.w3.org/2000/01/rdf-schema#comment> "A project based on research"@en .
+<http://fypontpro.org/fyp#ResearchProject> <http://www.w3.org/2000/01/rdf-schema#label> "Research Project"@en .
+# 
+# http://fypontpro.org/fyp#Script
+<http://fypontpro.org/fyp#Script> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Script> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#CreativeOutput> .
+<http://fypontpro.org/fyp#Script> <http://www.w3.org/2000/01/rdf-schema#comment> "Script or written material"@en .
+<http://fypontpro.org/fyp#Script> <http://www.w3.org/2000/01/rdf-schema#label> "Script"@en .
+# 
+# http://fypontpro.org/fyp#Student
+<http://fypontpro.org/fyp#Student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Student> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Person> .
+<http://fypontpro.org/fyp#Student> <http://www.w3.org/2002/07/owl#disjointWith> <http://fypontpro.org/fyp#Supervisor> .
+<http://fypontpro.org/fyp#Student> <http://www.w3.org/2000/01/rdf-schema#comment> "A student undertaking the final year project"@en .
+<http://fypontpro.org/fyp#Student> <http://www.w3.org/2000/01/rdf-schema#label> "Student"@en .
+# 
+# http://fypontpro.org/fyp#Supervisor
+<http://fypontpro.org/fyp#Supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Supervisor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Person> .
+<http://fypontpro.org/fyp#Supervisor> <http://www.w3.org/2000/01/rdf-schema#comment> "A faculty member supervising the project"@en .
+<http://fypontpro.org/fyp#Supervisor> <http://www.w3.org/2000/01/rdf-schema#label> "Supervisor"@en .
+# 
+# http://fypontpro.org/fyp#TechnicalProject
+<http://fypontpro.org/fyp#TechnicalProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#TechnicalProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Project> .
+<http://fypontpro.org/fyp#TechnicalProject> <http://www.w3.org/2000/01/rdf-schema#comment> "A project of technical nature"@en .
+<http://fypontpro.org/fyp#TechnicalProject> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Project"@en .
+# 
+# http://fypontpro.org/fyp#TechnologyStack
+<http://fypontpro.org/fyp#TechnologyStack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#TechnologyStack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://fypontpro.org/fyp#TechnologyStack> <http://www.w3.org/2000/01/rdf-schema#comment> "Technologies used in the project"@en .
+<http://fypontpro.org/fyp#TechnologyStack> <http://www.w3.org/2000/01/rdf-schema#label> "Technology Stack"@en .
+# 
+# http://fypontpro.org/fyp#Tool
+<http://fypontpro.org/fyp#Tool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#Tool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#TechnologyStack> .
+<http://fypontpro.org/fyp#Tool> <http://www.w3.org/2000/01/rdf-schema#comment> "Software or hardware tool"@en .
+<http://fypontpro.org/fyp#Tool> <http://www.w3.org/2000/01/rdf-schema#label> "Tool"@en .
+# 
+# http://fypontpro.org/fyp#University
+<http://fypontpro.org/fyp#University> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#University> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#Organization> .
+<http://fypontpro.org/fyp#University> <http://www.w3.org/2000/01/rdf-schema#comment> "The university context"@en .
+<http://fypontpro.org/fyp#University> <http://www.w3.org/2000/01/rdf-schema#label> "University"@en .
+# 
+# http://fypontpro.org/fyp#VisualArt
+<http://fypontpro.org/fyp#VisualArt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://fypontpro.org/fyp#VisualArt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://fypontpro.org/fyp#CreativeOutput> .
+<http://fypontpro.org/fyp#VisualArt> <http://www.w3.org/2000/01/rdf-schema#comment> "Artistic visual work"@en .
+<http://fypontpro.org/fyp#VisualArt> <http://www.w3.org/2000/01/rdf-schema#label> "Visual Art"@en .
+# 
+# http://schema.org/Person
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

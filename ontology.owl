@@ -1,15 +1,101 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://muhammadhamza00.github.io/semantic-live#"
-     xml:base="https://muhammadhamza00.github.io/semantic-live"
+<rdf:RDF xmlns="http://fypontpro.org/fyp#"
+     xml:base="http://fypontpro.org/fyp"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://muhammadhamza00.github.io/semantic-live">
-        <rdfs:comment>Ontology to model the Final Year Project process including people, documents, evaluations, and organizational structure.</rdfs:comment>
-        <rdfs:label>FypProOnt</rdfs:label>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://fypontpro.org/fyp">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-19</terms:created>
+        <terms:creator xml:lang="en">Your Name</terms:creator>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <rdfs:comment xml:lang="en">An ontology describing the academic final year project process, its participants, documents, and evaluation methods.</rdfs:comment>
+        <rdfs:label xml:lang="en">FYP Process Ontology</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://schema.org/"/>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -25,122 +111,86 @@
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#assignedTo -->
+    <!-- http://fypontpro.org/fyp#belongsToDepartment -->
 
 
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#assignedTo">
-        <rdfs:comment>Links a person or role to a task or project.</rdfs:comment>
-        <rdfs:label>assigned To</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://fypontpro.org/fyp#belongsToDepartment">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:range rdf:resource="http://fypontpro.org/fyp#Department"/>
+        <rdfs:comment xml:lang="en">Links a project or person with a department</rdfs:comment>
+        <rdfs:label xml:lang="en">belongs to department</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#authoredBy -->
+    <!-- http://fypontpro.org/fyp#hasDocumentation -->
 
 
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#authoredBy">
-        <rdfs:comment>Indicates the author of a document.</rdfs:comment>
-        <rdfs:label>authored By</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://fypontpro.org/fyp#hasDocumentation">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:range rdf:resource="http://fypontpro.org/fyp#Documentation"/>
+        <rdfs:comment xml:lang="en">Links a project with its documents</rdfs:comment>
+        <rdfs:label xml:lang="en">has documentation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#belongsToUniversity -->
+    <!-- http://fypontpro.org/fyp#hasEvaluation -->
 
 
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#belongsToUniversity">
-        <rdfs:comment>Relates a department to its university.</rdfs:comment>
-        <rdfs:label>belongs To University</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://fypontpro.org/fyp#hasEvaluation">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:range rdf:resource="http://fypontpro.org/fyp#Evaluation"/>
+        <rdfs:comment xml:lang="en">Links a project with its evaluation</rdfs:comment>
+        <rdfs:label xml:lang="en">has evaluation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#hasDepartment -->
+    <!-- http://fypontpro.org/fyp#hasEvaluator -->
 
 
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasDepartment">
-        <rdfs:comment>Indicates the departments under a university.</rdfs:comment>
-        <rdfs:label>has Department</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://fypontpro.org/fyp#hasEvaluator">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Evaluation"/>
+        <rdfs:range rdf:resource="http://fypontpro.org/fyp#Evaluator"/>
+        <rdfs:comment xml:lang="en">Associates an evaluation with an evaluator</rdfs:comment>
+        <rdfs:label xml:lang="en">has evaluator</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#hasDocumentation -->
+    <!-- http://fypontpro.org/fyp#hasStudent -->
 
 
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasDocumentation">
-        <rdfs:comment>Links a project to its documentation artifacts.</rdfs:comment>
-        <rdfs:label>has Documentation</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://fypontpro.org/fyp#hasStudent">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:range rdf:resource="http://fypontpro.org/fyp#Student"/>
+        <rdfs:comment xml:lang="en">Associates a project with a student</rdfs:comment>
+        <rdfs:label xml:lang="en">has student</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#hasEvaluator -->
+    <!-- http://fypontpro.org/fyp#hasSupervisor -->
 
 
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasEvaluator">
-        <rdfs:comment>Links an evaluation to the evaluator.</rdfs:comment>
-        <rdfs:label>has Evaluator</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://fypontpro.org/fyp#hasSupervisor">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:range rdf:resource="http://fypontpro.org/fyp#Supervisor"/>
+        <rdfs:comment xml:lang="en">Associates a project with a supervisor</rdfs:comment>
+        <rdfs:label xml:lang="en">has supervisor</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#hasGroup -->
+    <!-- http://fypontpro.org/fyp#usesTechnology -->
 
 
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasGroup">
-        <rdfs:comment>Links a project to its associated student group.</rdfs:comment>
-        <rdfs:label>has Group</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#hasProject -->
-
-
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasProject">
-        <rdfs:comment>Assigns a project to a group or student.</rdfs:comment>
-        <rdfs:label>has Project</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#hasSupervisor -->
-
-
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasSupervisor">
-        <rdfs:comment>Associates a group with its assigned supervisor.</rdfs:comment>
-        <rdfs:label>has Supervisor</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#memberOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#memberOf">
-        <rdfs:comment>Indicates student membership in a group.</rdfs:comment>
-        <rdfs:label>member Of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#reviewedBy -->
-
-
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#reviewedBy">
-        <rdfs:comment>Indicates the reviewer of a document or work.</rdfs:comment>
-        <rdfs:label>reviewed By</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#usesTechnology -->
-
-
-    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#usesTechnology">
-        <rdfs:comment>Indicates the technology used in a project.</rdfs:comment>
-        <rdfs:label>uses Technology</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://fypontpro.org/fyp#usesTechnology">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:range rdf:resource="http://fypontpro.org/fyp#TechnologyStack"/>
+        <rdfs:comment xml:lang="en">Links a project with a technology/tool used</rdfs:comment>
+        <rdfs:label xml:lang="en">uses technology</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -157,162 +207,74 @@
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#category -->
+    <!-- http://fypontpro.org/fyp#description -->
 
 
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#category">
-        <rdfs:comment>category of a project or document.</rdfs:comment>
-        <rdfs:label>category</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://fypontpro.org/fyp#description">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Description of the project</rdfs:comment>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#createdDate -->
+    <!-- http://fypontpro.org/fyp#gradeValue -->
 
 
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#createdDate">
-        <rdfs:comment>Timestamp of when a document or item was created.</rdfs:comment>
-        <rdfs:label>Created Date</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://fypontpro.org/fyp#gradeValue">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Grade"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Grade awarded to the project</rdfs:comment>
+        <rdfs:label xml:lang="en">Grade Value</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#duration -->
+    <!-- http://fypontpro.org/fyp#languageName -->
 
 
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#duration">
-        <rdfs:comment>Time span or length of a project or presentation.</rdfs:comment>
-        <rdfs:label>Duration</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://fypontpro.org/fyp#languageName">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of the language used</rdfs:comment>
+        <rdfs:label xml:lang="en">Language Name</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#email -->
+    <!-- http://fypontpro.org/fyp#scoreValue -->
 
 
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#email">
-        <rdfs:comment>Email address of a person.</rdfs:comment>
-        <rdfs:label>Email</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://fypontpro.org/fyp#scoreValue">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Mark"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Numeric score</rdfs:comment>
+        <rdfs:label xml:lang="en">Score Value</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#endDate -->
+    <!-- http://fypontpro.org/fyp#submissionDate -->
 
 
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#endDate">
-        <rdfs:comment>Completion date of the project.</rdfs:comment>
-        <rdfs:label>End Date</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://fypontpro.org/fyp#submissionDate">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Documentation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date when the document was submitted</rdfs:comment>
+        <rdfs:label xml:lang="en">Submission Date</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#evaluationDate -->
+    <!-- http://fypontpro.org/fyp#title -->
 
 
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#evaluationDate">
-        <rdfs:comment>Date on which evaluation was conducted.</rdfs:comment>
-        <rdfs:label>Evaluation Date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#goal -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#goal">
-        <rdfs:comment>Objective or aim of the project.</rdfs:comment>
-        <rdfs:label>Goal</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#grade -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#grade">
-        <rdfs:comment>Letter or qualitative grade for a project.</rdfs:comment>
-        <rdfs:label>Grade</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#projectDescription -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#projectDescription">
-        <rdfs:comment>Brief summary of the project.</rdfs:comment>
-        <rdfs:label>Project Description</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#projectTitle -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#projectTitle">
-        <rdfs:comment>Title of the project.</rdfs:comment>
-        <rdfs:label>Project Title</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#score -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#score">
-        <rdfs:comment>Numerical score in an evaluation.</rdfs:comment>
-        <rdfs:label>Score</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#startDate -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#startDate">
-        <rdfs:comment>Beginning date of the project.</rdfs:comment>
-        <rdfs:label>Start Date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#studentID -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#studentID">
-        <rdfs:comment>Unique identifier for a student.</rdfs:comment>
-        <rdfs:label>Student ID</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#supervisorID -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#supervisorID">
-        <rdfs:comment>Unique identifier for a supervisor.</rdfs:comment>
-        <rdfs:label>Supervisor ID</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#technologyName -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#technologyName">
-        <rdfs:comment>Name of the technology used.</rdfs:comment>
-        <rdfs:label>Technology Name</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://muhammadhamza00.github.io/semantic-live#version -->
-
-
-    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#version">
-        <rdfs:comment>Version number technology.</rdfs:comment>
-        <rdfs:label>Version</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://fypontpro.org/fyp#title">
+        <rdfs:domain rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Title of the project</rdfs:comment>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -329,183 +291,336 @@
     
 
 
-    <!-- dcterms:Document -->
+    <!-- http://fypontpro.org/fyp#Comment -->
 
 
-    <owl:Class rdf:about="dcterms:Document">
-        <rdfs:comment>A generic document entity from Dublin Core.</rdfs:comment>
-        <rdfs:label>Document</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Comment">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Evaluation"/>
+        <rdfs:comment xml:lang="en">Feedback provided by evaluator</rdfs:comment>
+        <rdfs:label xml:lang="en">Review Comment</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- foaf:Person -->
+    <!-- http://fypontpro.org/fyp#Committee -->
 
 
-    <owl:Class rdf:about="foaf:Person">
-        <rdfs:comment>A general human individual, reused from FOAF.</rdfs:comment>
-        <rdfs:label>Person</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Committee">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Organization"/>
+        <rdfs:comment xml:lang="en">Academic committee involved in FYP evaluation</rdfs:comment>
+        <rdfs:label xml:lang="en">Committee</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Committee -->
+    <!-- http://fypontpro.org/fyp#CreativeOutput -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Committee">
-        <rdfs:comment>Panel of evaluators or faculty overseeing project quality.</rdfs:comment>
-        <rdfs:label>Committee</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#CreativeOutput">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Creative or artistic output of a project</rdfs:comment>
+        <rdfs:label xml:lang="en">Creative Output</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Department -->
+    <!-- http://fypontpro.org/fyp#CreativeProject -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Department">
-        <rdfs:comment>Academic division within the university.</rdfs:comment>
-        <rdfs:label>Department</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#CreativeProject">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <owl:disjointWith rdf:resource="http://fypontpro.org/fyp#TechnicalProject"/>
+        <rdfs:comment xml:lang="en">A project with artistic or creative output</rdfs:comment>
+        <rdfs:label xml:lang="en">Creative Project</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Evaluation -->
+    <!-- http://fypontpro.org/fyp#Department -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Evaluation">
-        <rdfs:comment>Assessment process or result for a project.</rdfs:comment>
-        <rdfs:label>Evaluation</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Department">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Organization"/>
+        <owl:disjointWith rdf:resource="http://fypontpro.org/fyp#University"/>
+        <rdfs:comment xml:lang="en">Specific department within a university</rdfs:comment>
+        <rdfs:label xml:lang="en">Department</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Evaluator -->
+    <!-- http://fypontpro.org/fyp#Documentation -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Evaluator">
-        <rdfs:comment>A person assigned to evaluate student projects.</rdfs:comment>
-        <rdfs:label>Evaluator</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Documentation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A document related to the FYP project</rdfs:comment>
+        <rdfs:label xml:lang="en">Project Documentation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#FinalReport -->
+    <!-- http://fypontpro.org/fyp#Evaluation -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#FinalReport">
-        <rdfs:comment>Comprehensive documentation of the completed project.</rdfs:comment>
-        <rdfs:label>Final Report</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Evaluation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Evaluation process and outcome of a project</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Group -->
+    <!-- http://fypontpro.org/fyp#Evaluator -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Group">
-        <rdfs:comment>A team of students working on a single project.</rdfs:comment>
-        <rdfs:label>Group</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Evaluator">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Person"/>
+        <owl:disjointWith rdf:resource="http://fypontpro.org/fyp#Supervisor"/>
+        <rdfs:comment xml:lang="en">Person evaluating the project</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluator</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Presentation -->
+    <!-- http://fypontpro.org/fyp#Film -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Presentation">
-        <rdfs:comment>Slide deck or other material used to present the project.</rdfs:comment>
-        <rdfs:label>Presentation</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Film">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#CreativeOutput"/>
+        <rdfs:comment xml:lang="en">Film created as part of the project</rdfs:comment>
+        <rdfs:label xml:lang="en">Film</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Project -->
+    <!-- http://fypontpro.org/fyp#Framework -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Project">
-        <rdfs:comment>The final year project being undertaken.</rdfs:comment>
-        <rdfs:label>Project</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Framework">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#TechnologyStack"/>
+        <rdfs:comment xml:lang="en">Programming or creative framework</rdfs:comment>
+        <rdfs:label xml:lang="en">Framework</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#ProjectType -->
+    <!-- http://fypontpro.org/fyp#Grade -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#ProjectType">
-        <rdfs:comment>The type/category of the project (e.g., research, development).</rdfs:comment>
-        <rdfs:label>Project Type</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Grade">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Evaluation"/>
+        <rdfs:comment xml:lang="en">Final grade assigned to project</rdfs:comment>
+        <rdfs:label xml:lang="en">Grade</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Proposal -->
+    <!-- http://fypontpro.org/fyp#Language -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Proposal">
-        <rdfs:comment>Initial documentation outlining the project idea and plan.</rdfs:comment>
-        <rdfs:label>Proposal</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Language">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#TechnologyStack"/>
+        <owl:disjointWith rdf:resource="http://fypontpro.org/fyp#Tool"/>
+        <rdfs:comment xml:lang="en">Programming or scripting language</rdfs:comment>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Student -->
+    <!-- http://fypontpro.org/fyp#Mark -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Student">
-        <rdfs:comment>A person undertaking a final year project.</rdfs:comment>
-        <rdfs:label>Student</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Mark">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Evaluation"/>
+        <rdfs:comment xml:lang="en">Numeric score for a project</rdfs:comment>
+        <rdfs:label xml:lang="en">Mark</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Supervisor -->
+    <!-- http://fypontpro.org/fyp#Music -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Supervisor">
-        <rdfs:comment>Faculty member responsible for guiding the student group.</rdfs:comment>
-        <rdfs:label>Supervisor</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Music">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#CreativeOutput"/>
+        <rdfs:comment xml:lang="en">Musical or sound-based composition</rdfs:comment>
+        <rdfs:label xml:lang="en">Composition or Music</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#Technology -->
+    <!-- http://fypontpro.org/fyp#Organization -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Technology">
-        <rdfs:comment>Tools or programming languages used in the project.</rdfs:comment>
-        <rdfs:label>Technology</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">An academic or institutional body</rdfs:comment>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://muhammadhamza00.github.io/semantic-live#University -->
+    <!-- http://fypontpro.org/fyp#Person -->
 
 
-    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#University">
-        <rdfs:comment>Educational institution offering the program.</rdfs:comment>
-        <rdfs:label>University</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Person">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A person involved in the FYP process, based on schema:Person</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- schema:CollegeOrUniversity -->
+    <!-- http://fypontpro.org/fyp#Presentation -->
 
 
-    <owl:Class rdf:about="schema:CollegeOrUniversity">
-        <rdfs:comment>Academic institution from Schema.org.</rdfs:comment>
-        <rdfs:label>College or University</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Presentation">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Documentation"/>
+        <rdfs:comment xml:lang="en">Project presentation slides or media</rdfs:comment>
+        <rdfs:label xml:lang="en">Presentation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- schema:CreativeWork -->
+    <!-- http://fypontpro.org/fyp#Project -->
 
 
-    <owl:Class rdf:about="schema:CreativeWork">
-        <rdfs:comment>Creative content such as proposals and reports from Schema.org.</rdfs:comment>
-        <rdfs:label>Creative Work</rdfs:label>
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Project">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A Final Year Project entity, core to the ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">FYP Project</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#Proposal -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Proposal">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Documentation"/>
+        <owl:disjointWith rdf:resource="http://fypontpro.org/fyp#Report"/>
+        <rdfs:comment xml:lang="en">Initial project proposal document</rdfs:comment>
+        <rdfs:label xml:lang="en">Proposal Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#Report -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Report">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Documentation"/>
+        <rdfs:comment xml:lang="en">Mid or final project report</rdfs:comment>
+        <rdfs:label xml:lang="en">Project Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#ResearchProject -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#ResearchProject">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:comment xml:lang="en">A project based on research</rdfs:comment>
+        <rdfs:label xml:lang="en">Research Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#Script -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Script">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#CreativeOutput"/>
+        <rdfs:comment xml:lang="en">Script or written material</rdfs:comment>
+        <rdfs:label xml:lang="en">Script</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#Student -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Student">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Person"/>
+        <owl:disjointWith rdf:resource="http://fypontpro.org/fyp#Supervisor"/>
+        <rdfs:comment xml:lang="en">A student undertaking the final year project</rdfs:comment>
+        <rdfs:label xml:lang="en">Student</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#Supervisor -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Supervisor">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Person"/>
+        <rdfs:comment xml:lang="en">A faculty member supervising the project</rdfs:comment>
+        <rdfs:label xml:lang="en">Supervisor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#TechnicalProject -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#TechnicalProject">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Project"/>
+        <rdfs:comment xml:lang="en">A project of technical nature</rdfs:comment>
+        <rdfs:label xml:lang="en">Technical Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#TechnologyStack -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#TechnologyStack">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Technologies used in the project</rdfs:comment>
+        <rdfs:label xml:lang="en">Technology Stack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#Tool -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#Tool">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#TechnologyStack"/>
+        <rdfs:comment xml:lang="en">Software or hardware tool</rdfs:comment>
+        <rdfs:label xml:lang="en">Tool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#University -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#University">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#Organization"/>
+        <rdfs:comment xml:lang="en">The university context</rdfs:comment>
+        <rdfs:label xml:lang="en">University</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fypontpro.org/fyp#VisualArt -->
+
+
+    <owl:Class rdf:about="http://fypontpro.org/fyp#VisualArt">
+        <rdfs:subClassOf rdf:resource="http://fypontpro.org/fyp#CreativeOutput"/>
+        <rdfs:comment xml:lang="en">Artistic visual work</rdfs:comment>
+        <rdfs:label xml:lang="en">Visual Art</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+
+    <owl:Class rdf:about="http://schema.org/Person"/>
 </rdf:RDF>
 
 
