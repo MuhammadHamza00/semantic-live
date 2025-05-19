@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://muhammadhamza00.github.io/semantic-live#"
+     xml:base="https://muhammadhamza00.github.io/semantic-live"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://muhammadhamza00.github.io/semantic-live">
+        <rdfs:comment>Ontology to model the Final Year Project process including people, documents, evaluations, and organizational structure.</rdfs:comment>
+        <rdfs:label>FypProOnt</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#assignedTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#assignedTo">
+        <rdfs:comment>Links a person or role to a task or project.</rdfs:comment>
+        <rdfs:label>assigned To</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#authoredBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#authoredBy">
+        <rdfs:comment>Indicates the author of a document.</rdfs:comment>
+        <rdfs:label>authored By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#belongsToUniversity -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#belongsToUniversity">
+        <rdfs:comment>Relates a department to its university.</rdfs:comment>
+        <rdfs:label>belongs To University</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#hasDepartment -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasDepartment">
+        <rdfs:comment>Indicates the departments under a university.</rdfs:comment>
+        <rdfs:label>has Department</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#hasDocumentation -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasDocumentation">
+        <rdfs:comment>Links a project to its documentation artifacts.</rdfs:comment>
+        <rdfs:label>has Documentation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#hasEvaluator -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasEvaluator">
+        <rdfs:comment>Links an evaluation to the evaluator.</rdfs:comment>
+        <rdfs:label>has Evaluator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#hasGroup -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasGroup">
+        <rdfs:comment>Links a project to its associated student group.</rdfs:comment>
+        <rdfs:label>has Group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#hasProject -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasProject">
+        <rdfs:comment>Assigns a project to a group or student.</rdfs:comment>
+        <rdfs:label>has Project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#hasSupervisor -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#hasSupervisor">
+        <rdfs:comment>Associates a group with its assigned supervisor.</rdfs:comment>
+        <rdfs:label>has Supervisor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#memberOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#memberOf">
+        <rdfs:comment>Indicates student membership in a group.</rdfs:comment>
+        <rdfs:label>member Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#reviewedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#reviewedBy">
+        <rdfs:comment>Indicates the reviewer of a document or work.</rdfs:comment>
+        <rdfs:label>reviewed By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#usesTechnology -->
+
+
+    <owl:ObjectProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#usesTechnology">
+        <rdfs:comment>Indicates the technology used in a project.</rdfs:comment>
+        <rdfs:label>uses Technology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#category -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#category">
+        <rdfs:comment>category of a project or document.</rdfs:comment>
+        <rdfs:label>category</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#createdDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#createdDate">
+        <rdfs:comment>Timestamp of when a document or item was created.</rdfs:comment>
+        <rdfs:label>Created Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#duration -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#duration">
+        <rdfs:comment>Time span or length of a project or presentation.</rdfs:comment>
+        <rdfs:label>Duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#email -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#email">
+        <rdfs:comment>Email address of a person.</rdfs:comment>
+        <rdfs:label>Email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#endDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#endDate">
+        <rdfs:comment>Completion date of the project.</rdfs:comment>
+        <rdfs:label>End Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#evaluationDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#evaluationDate">
+        <rdfs:comment>Date on which evaluation was conducted.</rdfs:comment>
+        <rdfs:label>Evaluation Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#goal -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#goal">
+        <rdfs:comment>Objective or aim of the project.</rdfs:comment>
+        <rdfs:label>Goal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#grade -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#grade">
+        <rdfs:comment>Letter or qualitative grade for a project.</rdfs:comment>
+        <rdfs:label>Grade</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#projectDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#projectDescription">
+        <rdfs:comment>Brief summary of the project.</rdfs:comment>
+        <rdfs:label>Project Description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#projectTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#projectTitle">
+        <rdfs:comment>Title of the project.</rdfs:comment>
+        <rdfs:label>Project Title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#score -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#score">
+        <rdfs:comment>Numerical score in an evaluation.</rdfs:comment>
+        <rdfs:label>Score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#startDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#startDate">
+        <rdfs:comment>Beginning date of the project.</rdfs:comment>
+        <rdfs:label>Start Date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#studentID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#studentID">
+        <rdfs:comment>Unique identifier for a student.</rdfs:comment>
+        <rdfs:label>Student ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#supervisorID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#supervisorID">
+        <rdfs:comment>Unique identifier for a supervisor.</rdfs:comment>
+        <rdfs:label>Supervisor ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#technologyName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#technologyName">
+        <rdfs:comment>Name of the technology used.</rdfs:comment>
+        <rdfs:label>Technology Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#version -->
+
+
+    <owl:DatatypeProperty rdf:about="https://muhammadhamza00.github.io/semantic-live#version">
+        <rdfs:comment>Version number technology.</rdfs:comment>
+        <rdfs:label>Version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- dcterms:Document -->
+
+
+    <owl:Class rdf:about="dcterms:Document">
+        <rdfs:comment>A generic document entity from Dublin Core.</rdfs:comment>
+        <rdfs:label>Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- foaf:Person -->
+
+
+    <owl:Class rdf:about="foaf:Person">
+        <rdfs:comment>A general human individual, reused from FOAF.</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Committee -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Committee">
+        <rdfs:comment>Panel of evaluators or faculty overseeing project quality.</rdfs:comment>
+        <rdfs:label>Committee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Department -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Department">
+        <rdfs:comment>Academic division within the university.</rdfs:comment>
+        <rdfs:label>Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Evaluation -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Evaluation">
+        <rdfs:comment>Assessment process or result for a project.</rdfs:comment>
+        <rdfs:label>Evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Evaluator -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Evaluator">
+        <rdfs:comment>A person assigned to evaluate student projects.</rdfs:comment>
+        <rdfs:label>Evaluator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#FinalReport -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#FinalReport">
+        <rdfs:comment>Comprehensive documentation of the completed project.</rdfs:comment>
+        <rdfs:label>Final Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Group -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Group">
+        <rdfs:comment>A team of students working on a single project.</rdfs:comment>
+        <rdfs:label>Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Presentation -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Presentation">
+        <rdfs:comment>Slide deck or other material used to present the project.</rdfs:comment>
+        <rdfs:label>Presentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Project -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Project">
+        <rdfs:comment>The final year project being undertaken.</rdfs:comment>
+        <rdfs:label>Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#ProjectType -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#ProjectType">
+        <rdfs:comment>The type/category of the project (e.g., research, development).</rdfs:comment>
+        <rdfs:label>Project Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Proposal -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Proposal">
+        <rdfs:comment>Initial documentation outlining the project idea and plan.</rdfs:comment>
+        <rdfs:label>Proposal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Student -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Student">
+        <rdfs:comment>A person undertaking a final year project.</rdfs:comment>
+        <rdfs:label>Student</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Supervisor -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Supervisor">
+        <rdfs:comment>Faculty member responsible for guiding the student group.</rdfs:comment>
+        <rdfs:label>Supervisor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#Technology -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#Technology">
+        <rdfs:comment>Tools or programming languages used in the project.</rdfs:comment>
+        <rdfs:label>Technology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://muhammadhamza00.github.io/semantic-live#University -->
+
+
+    <owl:Class rdf:about="https://muhammadhamza00.github.io/semantic-live#University">
+        <rdfs:comment>Educational institution offering the program.</rdfs:comment>
+        <rdfs:label>University</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- schema:CollegeOrUniversity -->
+
+
+    <owl:Class rdf:about="schema:CollegeOrUniversity">
+        <rdfs:comment>Academic institution from Schema.org.</rdfs:comment>
+        <rdfs:label>College or University</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- schema:CreativeWork -->
+
+
+    <owl:Class rdf:about="schema:CreativeWork">
+        <rdfs:comment>Creative content such as proposals and reports from Schema.org.</rdfs:comment>
+        <rdfs:label>Creative Work</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

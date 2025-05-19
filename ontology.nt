@@ -1,0 +1,261 @@
+<https://muhammadhamza00.github.io/semantic-live> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://muhammadhamza00.github.io/semantic-live> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology to model the Final Year Project process including people, documents, evaluations, and organizational structure." .
+<https://muhammadhamza00.github.io/semantic-live> <http://www.w3.org/2000/01/rdf-schema#label> "FypProOnt" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://muhammadhamza00.github.io/semantic-live#assignedTo
+<https://muhammadhamza00.github.io/semantic-live#assignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#assignedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a person or role to a task or project." .
+<https://muhammadhamza00.github.io/semantic-live#assignedTo> <http://www.w3.org/2000/01/rdf-schema#label> "assigned To" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#authoredBy
+<https://muhammadhamza00.github.io/semantic-live#authoredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#authoredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the author of a document." .
+<https://muhammadhamza00.github.io/semantic-live#authoredBy> <http://www.w3.org/2000/01/rdf-schema#label> "authored By" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#belongsToUniversity
+<https://muhammadhamza00.github.io/semantic-live#belongsToUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#belongsToUniversity> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a department to its university." .
+<https://muhammadhamza00.github.io/semantic-live#belongsToUniversity> <http://www.w3.org/2000/01/rdf-schema#label> "belongs To University" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#hasDepartment
+<https://muhammadhamza00.github.io/semantic-live#hasDepartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#hasDepartment> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the departments under a university." .
+<https://muhammadhamza00.github.io/semantic-live#hasDepartment> <http://www.w3.org/2000/01/rdf-schema#label> "has Department" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#hasDocumentation
+<https://muhammadhamza00.github.io/semantic-live#hasDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project to its documentation artifacts." .
+<https://muhammadhamza00.github.io/semantic-live#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#label> "has Documentation" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#hasEvaluator
+<https://muhammadhamza00.github.io/semantic-live#hasEvaluator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#hasEvaluator> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an evaluation to the evaluator." .
+<https://muhammadhamza00.github.io/semantic-live#hasEvaluator> <http://www.w3.org/2000/01/rdf-schema#label> "has Evaluator" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#hasGroup
+<https://muhammadhamza00.github.io/semantic-live#hasGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#hasGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project to its associated student group." .
+<https://muhammadhamza00.github.io/semantic-live#hasGroup> <http://www.w3.org/2000/01/rdf-schema#label> "has Group" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#hasProject
+<https://muhammadhamza00.github.io/semantic-live#hasProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#hasProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Assigns a project to a group or student." .
+<https://muhammadhamza00.github.io/semantic-live#hasProject> <http://www.w3.org/2000/01/rdf-schema#label> "has Project" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#hasSupervisor
+<https://muhammadhamza00.github.io/semantic-live#hasSupervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#hasSupervisor> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a group with its assigned supervisor." .
+<https://muhammadhamza00.github.io/semantic-live#hasSupervisor> <http://www.w3.org/2000/01/rdf-schema#label> "has Supervisor" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#memberOf
+<https://muhammadhamza00.github.io/semantic-live#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates student membership in a group." .
+<https://muhammadhamza00.github.io/semantic-live#memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "member Of" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#reviewedBy
+<https://muhammadhamza00.github.io/semantic-live#reviewedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#reviewedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the reviewer of a document or work." .
+<https://muhammadhamza00.github.io/semantic-live#reviewedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reviewed By" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#usesTechnology
+<https://muhammadhamza00.github.io/semantic-live#usesTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://muhammadhamza00.github.io/semantic-live#usesTechnology> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the technology used in a project." .
+<https://muhammadhamza00.github.io/semantic-live#usesTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "uses Technology" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://muhammadhamza00.github.io/semantic-live#category
+<https://muhammadhamza00.github.io/semantic-live#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#category> <http://www.w3.org/2000/01/rdf-schema#comment> "category of a project or document." .
+<https://muhammadhamza00.github.io/semantic-live#category> <http://www.w3.org/2000/01/rdf-schema#label> "category" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#createdDate
+<https://muhammadhamza00.github.io/semantic-live#createdDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#createdDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Timestamp of when a document or item was created." .
+<https://muhammadhamza00.github.io/semantic-live#createdDate> <http://www.w3.org/2000/01/rdf-schema#label> "Created Date" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#duration
+<https://muhammadhamza00.github.io/semantic-live#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Time span or length of a project or presentation." .
+<https://muhammadhamza00.github.io/semantic-live#duration> <http://www.w3.org/2000/01/rdf-schema#label> "Duration" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#email
+<https://muhammadhamza00.github.io/semantic-live#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#email> <http://www.w3.org/2000/01/rdf-schema#comment> "Email address of a person." .
+<https://muhammadhamza00.github.io/semantic-live#email> <http://www.w3.org/2000/01/rdf-schema#label> "Email" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#endDate
+<https://muhammadhamza00.github.io/semantic-live#endDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#endDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Completion date of the project." .
+<https://muhammadhamza00.github.io/semantic-live#endDate> <http://www.w3.org/2000/01/rdf-schema#label> "End Date" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#evaluationDate
+<https://muhammadhamza00.github.io/semantic-live#evaluationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#evaluationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date on which evaluation was conducted." .
+<https://muhammadhamza00.github.io/semantic-live#evaluationDate> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation Date" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#goal
+<https://muhammadhamza00.github.io/semantic-live#goal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#goal> <http://www.w3.org/2000/01/rdf-schema#comment> "Objective or aim of the project." .
+<https://muhammadhamza00.github.io/semantic-live#goal> <http://www.w3.org/2000/01/rdf-schema#label> "Goal" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#grade
+<https://muhammadhamza00.github.io/semantic-live#grade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#grade> <http://www.w3.org/2000/01/rdf-schema#comment> "Letter or qualitative grade for a project." .
+<https://muhammadhamza00.github.io/semantic-live#grade> <http://www.w3.org/2000/01/rdf-schema#label> "Grade" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#projectDescription
+<https://muhammadhamza00.github.io/semantic-live#projectDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#projectDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Brief summary of the project." .
+<https://muhammadhamza00.github.io/semantic-live#projectDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Project Description" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#projectTitle
+<https://muhammadhamza00.github.io/semantic-live#projectTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#projectTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of the project." .
+<https://muhammadhamza00.github.io/semantic-live#projectTitle> <http://www.w3.org/2000/01/rdf-schema#label> "Project Title" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#score
+<https://muhammadhamza00.github.io/semantic-live#score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#score> <http://www.w3.org/2000/01/rdf-schema#comment> "Numerical score in an evaluation." .
+<https://muhammadhamza00.github.io/semantic-live#score> <http://www.w3.org/2000/01/rdf-schema#label> "Score" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#startDate
+<https://muhammadhamza00.github.io/semantic-live#startDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#startDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Beginning date of the project." .
+<https://muhammadhamza00.github.io/semantic-live#startDate> <http://www.w3.org/2000/01/rdf-schema#label> "Start Date" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#studentID
+<https://muhammadhamza00.github.io/semantic-live#studentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#studentID> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier for a student." .
+<https://muhammadhamza00.github.io/semantic-live#studentID> <http://www.w3.org/2000/01/rdf-schema#label> "Student ID" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#supervisorID
+<https://muhammadhamza00.github.io/semantic-live#supervisorID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#supervisorID> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier for a supervisor." .
+<https://muhammadhamza00.github.io/semantic-live#supervisorID> <http://www.w3.org/2000/01/rdf-schema#label> "Supervisor ID" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#technologyName
+<https://muhammadhamza00.github.io/semantic-live#technologyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#technologyName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the technology used." .
+<https://muhammadhamza00.github.io/semantic-live#technologyName> <http://www.w3.org/2000/01/rdf-schema#label> "Technology Name" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#version
+<https://muhammadhamza00.github.io/semantic-live#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://muhammadhamza00.github.io/semantic-live#version> <http://www.w3.org/2000/01/rdf-schema#comment> "Version number technology." .
+<https://muhammadhamza00.github.io/semantic-live#version> <http://www.w3.org/2000/01/rdf-schema#label> "Version" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# dcterms:Document
+<dcterms:Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<dcterms:Document> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic document entity from Dublin Core." .
+<dcterms:Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document" .
+# 
+# foaf:Person
+<foaf:Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<foaf:Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A general human individual, reused from FOAF." .
+<foaf:Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Committee
+<https://muhammadhamza00.github.io/semantic-live#Committee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Committee> <http://www.w3.org/2000/01/rdf-schema#comment> "Panel of evaluators or faculty overseeing project quality." .
+<https://muhammadhamza00.github.io/semantic-live#Committee> <http://www.w3.org/2000/01/rdf-schema#label> "Committee" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Department
+<https://muhammadhamza00.github.io/semantic-live#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Department> <http://www.w3.org/2000/01/rdf-schema#comment> "Academic division within the university." .
+<https://muhammadhamza00.github.io/semantic-live#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Evaluation
+<https://muhammadhamza00.github.io/semantic-live#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Evaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "Assessment process or result for a project." .
+<https://muhammadhamza00.github.io/semantic-live#Evaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Evaluator
+<https://muhammadhamza00.github.io/semantic-live#Evaluator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Evaluator> <http://www.w3.org/2000/01/rdf-schema#comment> "A person assigned to evaluate student projects." .
+<https://muhammadhamza00.github.io/semantic-live#Evaluator> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluator" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#FinalReport
+<https://muhammadhamza00.github.io/semantic-live#FinalReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#FinalReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive documentation of the completed project." .
+<https://muhammadhamza00.github.io/semantic-live#FinalReport> <http://www.w3.org/2000/01/rdf-schema#label> "Final Report" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Group
+<https://muhammadhamza00.github.io/semantic-live#Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Group> <http://www.w3.org/2000/01/rdf-schema#comment> "A team of students working on a single project." .
+<https://muhammadhamza00.github.io/semantic-live#Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Presentation
+<https://muhammadhamza00.github.io/semantic-live#Presentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Presentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Slide deck or other material used to present the project." .
+<https://muhammadhamza00.github.io/semantic-live#Presentation> <http://www.w3.org/2000/01/rdf-schema#label> "Presentation" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Project
+<https://muhammadhamza00.github.io/semantic-live#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "The final year project being undertaken." .
+<https://muhammadhamza00.github.io/semantic-live#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#ProjectType
+<https://muhammadhamza00.github.io/semantic-live#ProjectType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#ProjectType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type/category of the project (e.g., research, development)." .
+<https://muhammadhamza00.github.io/semantic-live#ProjectType> <http://www.w3.org/2000/01/rdf-schema#label> "Project Type" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Proposal
+<https://muhammadhamza00.github.io/semantic-live#Proposal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Proposal> <http://www.w3.org/2000/01/rdf-schema#comment> "Initial documentation outlining the project idea and plan." .
+<https://muhammadhamza00.github.io/semantic-live#Proposal> <http://www.w3.org/2000/01/rdf-schema#label> "Proposal" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Student
+<https://muhammadhamza00.github.io/semantic-live#Student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Student> <http://www.w3.org/2000/01/rdf-schema#comment> "A person undertaking a final year project." .
+<https://muhammadhamza00.github.io/semantic-live#Student> <http://www.w3.org/2000/01/rdf-schema#label> "Student" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Supervisor
+<https://muhammadhamza00.github.io/semantic-live#Supervisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Supervisor> <http://www.w3.org/2000/01/rdf-schema#comment> "Faculty member responsible for guiding the student group." .
+<https://muhammadhamza00.github.io/semantic-live#Supervisor> <http://www.w3.org/2000/01/rdf-schema#label> "Supervisor" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#Technology
+<https://muhammadhamza00.github.io/semantic-live#Technology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#Technology> <http://www.w3.org/2000/01/rdf-schema#comment> "Tools or programming languages used in the project." .
+<https://muhammadhamza00.github.io/semantic-live#Technology> <http://www.w3.org/2000/01/rdf-schema#label> "Technology" .
+# 
+# https://muhammadhamza00.github.io/semantic-live#University
+<https://muhammadhamza00.github.io/semantic-live#University> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://muhammadhamza00.github.io/semantic-live#University> <http://www.w3.org/2000/01/rdf-schema#comment> "Educational institution offering the program." .
+<https://muhammadhamza00.github.io/semantic-live#University> <http://www.w3.org/2000/01/rdf-schema#label> "University" .
+# 
+# schema:CollegeOrUniversity
+<schema:CollegeOrUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<schema:CollegeOrUniversity> <http://www.w3.org/2000/01/rdf-schema#comment> "Academic institution from Schema.org." .
+<schema:CollegeOrUniversity> <http://www.w3.org/2000/01/rdf-schema#label> "College or University" .
+# 
+# schema:CreativeWork
+<schema:CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<schema:CreativeWork> <http://www.w3.org/2000/01/rdf-schema#comment> "Creative content such as proposals and reports from Schema.org." .
+<schema:CreativeWork> <http://www.w3.org/2000/01/rdf-schema#label> "Creative Work" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
